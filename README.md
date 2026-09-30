@@ -663,19 +663,3 @@ Building modern, scalable, and user-focused web applications with:
 ```text
 React • Next.js • TypeScript • Node.js • Express • MongoDB
 ```
-
----
-
-## 🌐 Project Links
-
-**Live Website:**  
-https://bytespace-eta-seven.vercel.app/
-
-**Repository:**  
-Add your GitHub repository link here.
-
----
-
-<p align="center">
-  Built with ❤️ using React, TypeScript & Tailwind CSS
-</p>
