@@ -1,4 +1,4 @@
-# 🚀 ByteSpace — Online Course Marketplace
+# 🚀 ByteSpace - Online Course Marketplace
 
 **ByteSpace** is a modern, responsive, and animated online learning marketplace designed to connect **students with high-quality courses and creators with an audience**.
 
