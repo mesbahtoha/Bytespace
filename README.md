@@ -1,199 +1,279 @@
-````md
-# ByteSpace — Online Course Marketplace
+# 🚀 ByteSpace — Online Course Marketplace
 
-ByteSpace is a modern, responsive online learning marketplace where students can discover courses across 18 categories and creators can showcase and monetize their expertise.
+**ByteSpace** is a modern, responsive, and animated online learning marketplace designed to connect **students with high-quality courses and creators with an audience**.
 
-The project focuses on a polished learning experience with course discovery, filtering, creator profiles, authentication, shopping cart interactions, checkout flow, animated sections, infinite marquees, floating 3D elements, and responsive layouts across devices.
+Students can discover courses across multiple categories, search and filter learning content, explore course details and creators, manage a shopping cart, and complete a streamlined checkout flow. Creators can showcase their expertise through dedicated profiles and monetize their educational content.
 
-## 🌐 Live Demo
+Built with **React, TypeScript, Vite, Tailwind CSS, and React Router**, ByteSpace focuses on a polished user experience, responsive design, smooth animations, and scalable frontend architecture.
+
+### 🌐 Live Demo
 
 **[Visit ByteSpace →](https://bytespace-eta-seven.vercel.app/)**
 
 ---
 
-## ✨ Features
+## ✨ Highlights
+
+- 🎓 Modern online course marketplace experience
+- 🔎 Real-time course search and discovery
+- 🗂️ 18 course categories
+- 🎯 Category, level, and sorting filters
+- 📄 Paginated course catalog
+- 🔗 Deep-linkable search and category URLs
+- 🎥 Interactive course detail pages
+- 👨‍🏫 Creator profiles with follow/unfollow
+- 🛒 Global shopping cart with slide-in drawer
+- 💳 Checkout flow
+- 🔐 Sign in and sign up authentication UI
+- ⭐ Course ratings and review filtering
+- 📱 Fully responsive across mobile, tablet, and desktop
+- ✨ Scroll-based reveal animations
+- 🎨 Floating 3D visual elements and micro-interactions
+- 🔔 Toast notifications
+- 💾 Persistent client-side session and cart state
+- ⚡ Fast Vite-powered development and production builds
+- 🚀 Vercel-ready deployment
+
+---
+
+## 🎯 Core Features
 
 ### 🏠 Home
 
+The landing page provides an engaging introduction to the ByteSpace learning ecosystem.
+
 - Animated hero section
 - Live course search
-- Infinite logo marquee
-- Course category filtering
+- Popular category discovery
+- Logo/brand marquee
 - Featured course grid
 - Learning paths
-- Animated counters
+- Animated statistics and counters
 - Creator showcase
-- Testimonials
-- Learning progress UI
-- Floating 3D decorative elements
+- Student testimonials
 - Scroll reveal animations
-- Micro-interactions
+- Responsive layouts
+
+---
 
 ### 📚 Course Catalog
 
-Available at `/courses`.
+The `/courses` page provides a complete course discovery experience.
+
+**Features include:**
 
 - Full-text course search
 - Category filtering
-- Course level filtering
+- Difficulty/level filtering
 - Sorting
 - Pagination
-- URL-based search and category state
-- Deep-linkable course discovery
+- Course cards
+- Search query persistence
+- Deep-linkable filters
 
 Examples:
 
 ```text
-/courses?cat=design
-/courses?q=react
-````
+/courses?q=javascript
+/courses?cat=web-development
+```
 
-### 🎥 Course Details
+This allows users to share or bookmark specific catalog searches.
 
-Available at:
+---
+
+### 🎓 Course Details
+
+Each course has a dedicated page:
 
 ```text
 /course/:id
 ```
 
-Includes:
+Course pages include:
 
-* Course video preview
-* Course overview
-* Curriculum sidebar
-* About tab
-* Lessons tab
-* Reviews tab
-* Rating breakdown
-* Star-based review filtering
+- Course thumbnail and information
+- Video preview
+- Course pricing
+- Instructor information
+- Curriculum
+- Lessons
+- Course description
+- Student reviews
+- Rating breakdown
+- Star-based review filtering
+- Add-to-cart functionality
+
+---
 
 ### 👨‍🏫 Creator Profiles
 
-Available at:
+Creators have dedicated profile pages:
 
 ```text
 /creator/:id
 ```
 
-Creator pages include:
+Each profile can include:
 
-* Creator biography
-* Follow / unfollow interaction
-* Creator course list
-* Creator-focused course discovery
+- Creator biography
+- Profile information
+- Published courses
+- Course statistics
+- Follow/unfollow interaction
+- Creator-focused course discovery
+
+---
 
 ### 🔐 Authentication
 
-Available routes:
+ByteSpace includes a polished authentication experience.
+
+#### Sign In
 
 ```text
 /signin
+```
+
+#### Sign Up
+
+```text
 /signup
 ```
 
 Authentication UI includes:
 
-* Form validation
-* Validation error states
-* Error shake animation
-* Password visibility toggle
-* Loading states
-* Social login buttons
-* Persistent session state
+- Form validation
+- Inline validation errors
+- Loading states
+- Password visibility toggle
+- Error shake animation
+- Social authentication buttons
+- Persistent session state
 
-### 🛒 Commerce
+---
 
-ByteSpace includes a complete shopping experience with:
+### 🛒 Shopping Cart & Checkout
 
-* Global cart state
-* Shopping bag
-* Slide-in cart drawer
-* Add/remove course interactions
-* Toast notifications
-* Checkout flow
+ByteSpace includes a global commerce experience.
 
-### 🎨 Animations & Interactions
+Users can:
 
-The interface includes:
+- Add courses to their cart
+- Remove courses
+- View cart totals
+- Open the slide-in cart drawer
+- Receive toast notifications
+- Continue to checkout
 
-* Infinite horizontal marquees
-* Scroll reveal animations
-* Animated counters
-* Floating 3D shapes
-* Hover interactions
-* Smooth transitions
-* Loading states
-* Error animations
-* Toast feedback
-* Micro-interactions throughout the UI
+The cart state is available throughout the application through React Context.
+
+---
+
+### ⭐ Reviews & Ratings
+
+Course detail pages provide an interactive review experience.
+
+Users can explore:
+
+- Overall course rating
+- Rating distribution
+- Individual reviews
+- Star-based filtering
+
+This makes it easier for students to evaluate course quality before purchasing.
+
+---
 
 ### 📱 Responsive Design
 
-ByteSpace is designed to work across:
+ByteSpace is designed mobile-first and adapts across:
 
-* Mobile
-* Tablet
-* Laptop
-* Desktop
-* Large desktop screens
+- 📱 Mobile
+- 📲 Tablet
+- 💻 Desktop
+- 🖥️ Large screens
 
-### 🚫 Custom 404
-
-A branded custom 404 page is included for invalid routes.
+Navigation, course grids, filters, cart interactions, typography, spacing, and content layouts are optimized for different screen sizes.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧰 Tech Stack
 
-| Layer            | Technology                                   |
-| ---------------- | -------------------------------------------- |
-| UI               | React 18 + TypeScript                        |
-| Build Tool       | Vite 5                                       |
-| Styling          | Tailwind CSS 3                               |
-| Animations       | Custom CSS Keyframes + Intersection Observer |
-| Routing          | React Router 7                               |
-| Icons            | Lucide React                                 |
-| State Management | React Context API                            |
-| Deployment       | Vercel                                       |
+| Layer | Technology |
+|---|---|
+| UI | React 18 |
+| Language | TypeScript |
+| Build Tool | Vite 5 |
+| Styling | Tailwind CSS 3 |
+| Routing | React Router 7 |
+| Icons | Lucide React |
+| State Management | React Context |
+| Animations | CSS Keyframes + Intersection Observer |
+| Deployment | Vercel |
 
 ---
 
-## 📂 Project Structure
+## 🏗️ Project Architecture
 
 ```text
 bytespace/
+│
 ├── public/
 │   └── assets/
-│       └── # Hero portraits and 3D shape assets
+│       ├── hero portraits
+│       └── 3D shape renders
+│           ├── logo1
+│           ├── logo2
+│           ├── ...
+│           └── logo14
 │
 ├── src/
-│   ├── pages/
-│   │   └── # Route screens
 │   │
 │   ├── components/
-│   │   └── # Reusable UI components
+│   │   ├── Navbar
+│   │   ├── Footer
+│   │   ├── CourseCard
+│   │   └── reusable UI components
+│   │
+│   ├── pages/
+│   │   ├── Home
+│   │   ├── Courses
+│   │   ├── CourseDetail
+│   │   ├── Creator
+│   │   ├── SignIn
+│   │   ├── SignUp
+│   │   └── NotFound
 │   │
 │   ├── store/
 │   │   └── shop.tsx
-│   │       # Cart, toast and session context
+│   │       ├── Cart Context
+│   │       ├── Toast Context
+│   │       └── Session Context
 │   │
 │   ├── data.ts
-│   │   # Courses, categories, creators and reviews
+│   │   ├── courses
+│   │   ├── categories
+│   │   ├── creators
+│   │   └── reviews
 │   │
 │   ├── hooks.ts
-│   │   # useInView, useCounter, useLocalStorage
+│   │   ├── useInView
+│   │   ├── useCounter
+│   │   └── useLocalStorage
 │   │
 │   ├── utils.ts
-│   │   # Shared utility helpers
+│   │   └── cn()
 │   │
 │   ├── index.css
-│   │   # Global typography and animation keyframes
+│   │   ├── typography
+│   │   └── animation keyframes
 │   │
 │   ├── App.tsx
-│   │   # Router and application providers
+│   │   └── Router + Providers
 │   │
 │   └── main.tsx
-│       # Application entry point
+│       └── Application entry point
 │
 ├── index.html
 ├── tailwind.config.js
@@ -204,35 +284,84 @@ bytespace/
 
 ---
 
-## 🚀 Getting Started
+## 🗺️ Application Routes
+
+| Route | Description |
+|---|---|
+| `/` | Home / Landing Page |
+| `/courses` | Course Catalog |
+| `/course/:id` | Course Details |
+| `/creator/:id` | Creator Profile |
+| `/signin` | Sign In |
+| `/signup` | Sign Up |
+| `*` | 404 Not Found |
+
+---
+
+## 🔍 Course Discovery
+
+ByteSpace supports multiple ways to discover learning content.
+
+### Search
+
+```text
+/courses?q=react
+```
+
+### Category
+
+```text
+/courses?cat=web-development
+```
+
+### Combined Discovery
+
+Search and filtering parameters can be used together to create shareable course discovery URLs.
+
+---
+
+## ⚡ Getting Started
 
 ### Prerequisites
 
-Before running the project locally, make sure you have:
+Make sure you have the following installed:
 
-* Node.js 18 or later
-* npm
+- **Node.js 18+**
+- **npm**
 
-### 1. Clone the repository
+You can verify your installation:
 
 ```bash
-git clone <your-github-repository-url>
+node --version
+npm --version
+```
+
+---
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
 cd bytespace
 ```
 
-### 2. Install dependencies
+---
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Start the development server
+---
+
+### 3. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-The development server will start at:
+The application will be available at:
 
 ```text
 http://localhost:5173
@@ -240,151 +369,112 @@ http://localhost:5173
 
 ---
 
+### 4. Create Production Build
+
+```bash
+npm run build
+```
+
+The optimized production files will be generated inside:
+
+```text
+dist/
+```
+
+---
+
+### 5. Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
 ## 📜 Available Scripts
 
-| Command           | Description                                           |
-| ----------------- | ----------------------------------------------------- |
-| `npm run dev`     | Start the Vite development server                     |
-| `npm run build`   | Run TypeScript checks and create the production build |
-| `npm run preview` | Preview the production build locally                  |
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts the Vite development server |
+| `npm run build` | Type-checks and creates a production build |
+| `npm run preview` | Previews the production build locally |
 
 ---
 
-## 🧭 Application Routes
+## 🎨 Design & UX
 
-| Route          | Screen          |
-| -------------- | --------------- |
-| `/`            | Home            |
-| `/courses`     | Course catalog  |
-| `/course/:id`  | Course details  |
-| `/creator/:id` | Creator profile |
-| `/signin`      | Sign in         |
-| `/signup`      | Sign up         |
-| `*`            | Custom 404      |
+ByteSpace was designed around a modern learning-platform aesthetic with an emphasis on clarity, interaction, and visual hierarchy.
 
----
+### Design principles
 
-## 🔎 Course Discovery
-
-The course catalog supports both search and category-based discovery.
-
-### Search by keyword
-
-```text
-/courses?q=react
-```
-
-### Filter by category
-
-```text
-/courses?cat=design
-```
-
-Using URL parameters allows course discovery states to be shared and revisited through direct links.
+- Clean and minimal interface
+- Strong typography hierarchy
+- Responsive course grids
+- Consistent spacing system
+- Accessible interactive elements
+- Smooth transitions
+- Micro-interactions
+- Animated counters
+- Scroll-triggered reveals
+- Floating visual elements
+- Interactive hover states
+- Mobile-friendly navigation
 
 ---
 
-## 🎯 UI & Design
+## 🧩 State Management
 
-ByteSpace is designed around a modern EdTech/SaaS visual language.
+ByteSpace uses **React Context** for lightweight global state management.
 
-The interface combines:
+### Cart State
 
-* Bold typography
-* High-contrast visual sections
-* Responsive layouts
-* Course-focused content hierarchy
-* Floating abstract 3D elements
-* Infinite marquee animations
-* Smooth reveal effects
-* Interactive cards
-* Responsive navigation
-* Clear search and filtering controls
-* Consistent spacing and component styling
+Responsible for:
 
-The goal is to create an engaging interface while keeping course discovery simple and intuitive.
+- Adding courses
+- Removing courses
+- Cart item management
+- Cart totals
+- Cart drawer state
 
----
+### Session State
 
-## 📈 Project Architecture
+Responsible for:
 
-The project uses a component-based React architecture with reusable UI elements and centralized client-side state.
+- Authentication state
+- Persistent session
+- User information
 
-### Components
+### Toast State
 
-Reusable components are organized under:
+Responsible for:
 
-```text
-src/components/
-```
-
-These components handle common interface elements such as:
-
-* Navigation
-* Footer
-* Course cards
-* Filters
-* Search
-* Cart
-* Toast notifications
-* Creator sections
-* Shared UI elements
-
-### Pages
-
-Application-level screens are organized under:
-
-```text
-src/pages/
-```
-
-Each page represents a major application route.
-
-### State Management
-
-Global client-side state is handled through React Context.
-
-The shared store manages:
-
-* Cart state
-* Toast notifications
-* Session state
-
-Main store:
-
-```text
-src/store/shop.tsx
-```
-
-### Custom Hooks
-
-Reusable application logic is kept in:
-
-```text
-src/hooks.ts
-```
-
-Current utilities include:
-
-* `useInView`
-* `useCounter`
-* `useLocalStorage`
+- Success messages
+- Error notifications
+- Cart feedback
+- User interaction feedback
 
 ---
 
-## ⚡ Performance & UX
+## 🎞️ Animation System
 
-The application uses lightweight client-side techniques to provide smooth interactions without adding unnecessary dependencies.
+The application uses a combination of:
 
-The project includes:
+- CSS keyframes
+- Tailwind utilities
+- Intersection Observer
+- Custom React hooks
+- Hover transitions
+- Transform animations
 
-* Component reuse
-* CSS-based animations
-* Intersection Observer for reveal effects
-* Client-side filtering
-* Responsive rendering
-* Lazy-style interaction patterns
-* URL-driven catalog state
+Reusable hooks include:
+
+```text
+useInView()
+useCounter()
+useLocalStorage()
+```
+
+These help keep animation and persistence behavior reusable across the application.
 
 ---
 
@@ -392,38 +482,25 @@ The project includes:
 
 ByteSpace is configured for deployment on **Vercel**.
 
-The production build is generated into:
+### Deploy Using Vercel Dashboard
+
+1. Push the project to GitHub.
+2. Open Vercel.
+3. Import the repository.
+4. Select the **Vite** framework preset.
+5. Deploy.
+
+Vercel automatically detects the Vite configuration and uses the production output from:
 
 ```text
 dist/
 ```
 
-### Deploy through Vercel Dashboard
+---
 
-1. Import the GitHub repository into Vercel.
-2. Vercel should automatically detect Vite.
-3. Confirm the project settings.
-4. Deploy.
+### Deploy Using Vercel CLI
 
-The project includes:
-
-```text
-vercel.json
-```
-
-for SPA rewrite configuration, allowing client-side routes such as:
-
-```text
-/courses
-/course/:id
-/creator/:id
-```
-
-to work correctly after deployment.
-
-### Deploy using Vercel CLI
-
-Install the Vercel CLI:
+Install Vercel CLI:
 
 ```bash
 npm install -g vercel
@@ -443,15 +520,21 @@ vercel --prod
 
 ---
 
-## 🌐 Live Project
+## 🔄 SPA Routing
 
-**ByteSpace — Online Course Marketplace**
+Because ByteSpace is a single-page application, `vercel.json` provides SPA fallback behavior so routes such as:
 
-🔗 [https://bytespace-eta-seven.vercel.app/](https://bytespace-eta-seven.vercel.app/)
+```text
+/courses
+/course/123
+/creator/456
+```
+
+continue to work correctly when accessed directly.
 
 ---
 
-## 🔀 Git Workflow
+## 🌿 Git Workflow
 
 The project follows a feature-branch workflow.
 
@@ -465,95 +548,134 @@ The `main` branch contains releasable code.
 
 ### Feature Branches
 
-Development work is organized through feature branches such as:
-
-```text
-feature/<topic>
-```
-
-Examples:
-
 ```text
 feature/course-filter
-feature/cart-drawer
+feature/auth-ui
+feature/checkout
 feature/creator-profile
-feature/auth-validation
 ```
 
-Changes are merged into `main` through Pull Requests.
+### Workflow
+
+```text
+Feature Branch
+      ↓
+Development
+      ↓
+Testing
+      ↓
+Pull Request
+      ↓
+Code Review
+      ↓
+main
+```
 
 ---
 
 ## 📝 Commit Convention
 
-Commit messages follow the Conventional Commits style.
+ByteSpace follows **Conventional Commits**.
 
 Examples:
 
 ```text
 feat: add course filtering
-fix: resolve cart drawer issue
+feat: implement creator profile
+fix: resolve mobile navigation issue
+fix: correct cart total calculation
+refactor: improve course card component
+style: improve course catalog spacing
 chore: update dependencies
-refactor: improve course card
-style: update hero typography
+docs: improve README
 ```
 
-Common prefixes:
+---
 
-| Prefix      | Purpose                |
-| ----------- | ---------------------- |
-| `feat:`     | Add a new feature      |
-| `fix:`      | Fix a bug              |
-| `refactor:` | Refactor existing code |
-| `style:`    | UI or styling changes  |
-| `chore:`    | Maintenance tasks      |
-| `docs:`     | Documentation changes  |
+## 📈 Future Roadmap
+
+Potential future improvements include:
+
+- [ ] Backend API integration
+- [ ] Real database persistence
+- [ ] Real user authentication
+- [ ] Creator course management dashboard
+- [ ] Course creation and publishing
+- [ ] Real payment integration
+- [ ] Student learning dashboard
+- [ ] Course progress tracking
+- [ ] Video lesson streaming
+- [ ] Certificates
+- [ ] Wishlist
+- [ ] Advanced recommendation system
+- [ ] Creator analytics
+- [ ] Admin dashboard
+- [ ] Email notifications
+- [ ] Reviews backed by a database
 
 ---
 
-## 🔮 Future Improvements
+## 🤝 Contributing
 
-Potential future enhancements include:
+Contributions, suggestions, and improvements are welcome.
 
-* Real backend integration
-* Persistent database storage
-* Real payment gateway integration
-* Creator dashboard
-* Course publishing system
-* Student learning dashboard
-* Course progress tracking
-* Backend authentication
-* Role-based authorization
-* Real-time notifications
-* Admin dashboard
-* Creator analytics
-* Course enrollment management
+### Contribution Process
 
----
+1. Fork the repository.
+2. Create a feature branch.
 
-## 📌 Project Status
+```bash
+git checkout -b feature/your-feature
+```
 
-ByteSpace is currently deployed and available as a responsive online course marketplace frontend.
+3. Make your changes.
+4. Test the application.
+5. Commit using Conventional Commits.
 
-The current implementation includes course discovery, filtering, authentication UI, creator profiles, shopping cart interactions, checkout flow, responsive layouts, animations, and Vercel deployment.
+```bash
+git commit -m "feat: add your feature"
+```
+
+6. Push the branch.
+
+```bash
+git push origin feature/your-feature
+```
+
+7. Open a Pull Request.
 
 ---
 
 ## 📄 License
 
-This project was created for learning, development, and portfolio purposes.
+This project is intended for educational, portfolio, and demonstration purposes.
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Developer
 
-**Md. Mesbahul Alam**
+**Mesbah Toha**
 
-Built with React, TypeScript, Tailwind CSS and a focus on creating a polished, responsive and interactive learning experience.
+Full Stack MERN Developer
 
-### Live Demo
+Building modern, scalable, and user-focused web applications with:
 
-🔗 [https://bytespace-eta-seven.vercel.app/](https://bytespace-eta-seven.vercel.app/)
-
+```text
+React • Next.js • TypeScript • Node.js • Express • MongoDB
 ```
-```
+
+---
+
+## 🌐 Project Links
+
+**Live Website:**  
+https://bytespace-eta-seven.vercel.app/
+
+**Repository:**  
+Add your GitHub repository link here.
+
+---
+
+<p align="center">
+  Built with ❤️ using React, TypeScript & Tailwind CSS
+</p>
